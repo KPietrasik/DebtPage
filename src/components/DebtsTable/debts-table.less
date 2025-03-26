@@ -1,0 +1,44 @@
+.debts-table {
+  &__grid-header {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    color: #d3d3d3;
+    padding: 10px 0;
+    font-weight: bold;
+    text-align: left;
+    text-wrap: nowrap;
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px 0;
+    border-top: 1px solid #d3d3d3;
+    font-size: 14px;
+    color: #003054;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #d3d3d3;
+    }
+  }
+
+  &__arrow {
+    transition: transform 0.3s ease;
+    width: 10px;
+    height: 10px;
+    margin-left: 4px;
+    fill: #d3d3d3;
+  }
+
+  &__grid-header.desc .debts-table__arrow {
+    transform: rotate(180deg);
+  }
+
+  &__grid-header.asc .debts-table__arrow {
+    transform: rotate(0deg);
+  }
+
+}
